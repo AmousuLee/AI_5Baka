@@ -20,13 +20,23 @@ laptop(AzuzZeppy) :-
 	spec(has_dedicated_gpu),
 	write('The laptop i will recommend you: AzuzZeppy').
 
+
 laptop(AzuzFake) :-
 	spec(gaming),
-	spec(heavy),
+	spec(webcam),
 	spec(expensive),
 	spec(power_consuming),
 	spec(has_dedicated_gpu),
 	write('The laptop i will recommend you: AzuzFake').
+
+laptop(Squidware) :-
+	spec(gaming),
+	spec(gamer),
+	spec(battery_life),
+	spec(budget_range),
+	spec(has_dedicated_gpu),
+	write('The laptop i will recommend you: Squidware').
+
 
 laptop(Jade) :-
 	spec(gamer),
@@ -34,18 +44,35 @@ laptop(Jade) :-
 	spec(battery_life),
 	spec(power_consuming),
 	spec(has_dedicated_gpu),
+	spec(screen),
 	write('The laptop i will recommend you: Jade').
 
-laptop(Lolipop) :-
-	spec(aesthetic),
+
+laptop(Lolibook) :-
 	spec(work),
+	spec(screen),
 	spec(battery_life),
-	write('The laptop i will recommend you: Lolipop').
+	spec(webcam),
+	write('The laptop i will recommend you: Lolibook').
+
+laptop(msi) :-
+	spec(aesthetic),
+	spec(gamer),
+	spec(battery_life),
+	spec(webcam),
+	write('The laptop i will recommend you: MSI').
+
+laptop(JOI) :-
+	spec(battery_life),
+	spec(work),
+	spec(budget_range),
+	write('The laptop i will recommend you: JOI').
+	
 
 laptop(MacBook) :-
 	spec(aesthetic),
 	spec(work),
-	spec(battery_life),
+	spec(webcam),
 	spec(expensive),
 	write('The laptop i will recommend you: MacBook').
 
@@ -54,21 +81,17 @@ laptop(aSUSyBaka) :-
 	spec(battery_life).
 	write('The laptop i will recommend you: aSuSyBaka').
 
+
 %-------------------------ASK----------------------
 % To ask whether or not user is a gamer
 spec(gamer):-
 	nl,
-	verify("Are you a gamer? (y/n) : ").
+	verify("Are you a gamer? (y/n) : " ).
 
 % To ask whether or not user uses laptop for work
 spec(work):-
 	nl,
 	verify("Are you using your laptop for your work? (y/n) : ").
-
-% To ask whether or not user uses laptop for study
-spec(study):-
-	nl,
-	verify("Are you using your laptop for study? (y/n) : ").
 
 % To ask whether or not user uses laptop on battery
 spec(battery_life):-
@@ -90,6 +113,12 @@ spec(expensive):-
 	nl,
 	verify("Do u have a high budget? (y/n) : ").
 
+% To ask whether the user budget is withn range
+spec(budget_range):-
+	nl,
+	verify("Is your laptop budget below RM2000? (y/n) : ").
+
+
 % To ask whether or not user is a huge power consumer
 spec(power_consuming):-
 	nl,
@@ -104,6 +133,22 @@ spec(has_dedicated_gpu):-
 spec(aesthetic):-
 	nl,
 	verify("Do you want your laptop to be aesthetic? (y/n) : ").
+
+% To ask whether or not user wants a webcam LOL
+spec(webcam):-
+	nl,
+	verify("Do you want your laptop to have a webcam? (y/n) : ").
+
+% To ask whether the user wants a big screen
+spec(screen):-
+	nl,
+	verify("Do you want your laptop to have a 15inch screen? (y/n) : ").
+
+% To ask whether or not user uses laptop for study
+spec(study):-
+	nl,
+	verify("Are you using your laptop for study? (y/n) : ").
+
 	
 
 %------------------------FUNCTION-------------------
