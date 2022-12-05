@@ -49,6 +49,11 @@ laptop(MacBook) :-
 	spec(expensive),
 	write('The laptop i will recommend you: MacBook').
 
+laptop(aSUSyBaka) :-
+	spec(study),
+	spec(battery_life).
+	write('The laptop i will recommend you: aSuSyBaka').
+
 %-------------------------ASK----------------------
 % To ask whether or not user is a gamer
 spec(gamer):-
@@ -59,6 +64,11 @@ spec(gamer):-
 spec(work):-
 	nl,
 	verify("Are you using your laptop for your work? (y/n) : ").
+
+% To ask whether or not user uses laptop for study
+spec(study):-
+	nl,
+	verify("Are you using your laptop for study? (y/n) : ").
 
 % To ask whether or not user uses laptop on battery
 spec(battery_life):-
