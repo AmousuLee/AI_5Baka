@@ -18,6 +18,7 @@ laptop(AzuzZeppy) :-
 	spec(expensive),
 	spec(power_consuming),
 	spec(has_dedicated_gpu),
+	spec(port),
 	write('The laptop i will recommend you: AzuzZeppy').
 
 
@@ -148,6 +149,11 @@ spec(screen):-
 spec(study):-
 	nl,
 	verify("Are you using your laptop for study? (y/n) : ").
+	
+% To ask user if their required a lot of port for work
+spec(port):-
+	n1,
+	verify("Are you going to need use a lot of port? (y/n) : ").
 
 	
 
