@@ -83,6 +83,13 @@ laptop(aSUSyBaka) :-
 	spec(battery_life).
 	write('The laptop i will recommend you: aSuSyBaka').
 
+laptop(IVM) :-
+	spec(battery_life),
+	spec(port),
+	spec(work),
+	spec(budget_range).
+	write('The laptop i will recommend you: IVM').
+
 
 %-------------------------ASK----------------------
 % To ask whether or not user is a gamer
