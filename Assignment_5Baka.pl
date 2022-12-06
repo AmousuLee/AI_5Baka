@@ -17,7 +17,6 @@ laptop(jade) :- jade,!.
 laptop(msi) :- msi,!.
 laptop(ivm) :- ivm,!.
 laptop(joi) :- joi,!.
-laptop(unknown).
 
 %--------------------------LAPTOP IDENTIFICATION---------------------
 azuz_zephy :-
@@ -83,12 +82,12 @@ spec(big_battery):-
 % To ask whether or not user want a laptop with small battery
 spec(small_battery):-
 	nl,
-	verify("Do u mind a laptop with smaller battery?").
+	verify("Do u not mind a laptop with smaller battery?").
 
 % To ask whether or not user wants a heavy laptop
 spec(heavy):-
 	nl,
-	verify("Do you mind a heavy laptop?").
+	verify("Do you not mind a heavy laptop?").
 
 % To ask whether or not user wants a lightweight laptop
 spec(light):-
@@ -106,11 +105,6 @@ spec(expensive):-
 spec(budget_cheap):-
 	nl,
 	verify("Is your laptop budget below RM3000?").
-
-% To ask whether or not user wants GPU
-spec(has_dedicated_gpu):-
-	nl,
-	verify("Do you want your laptop have a dedicated GPU?").
 
 % To ask whether or not user wants a webcam
 spec(webcam):-
