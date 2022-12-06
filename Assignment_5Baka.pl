@@ -54,6 +54,7 @@ laptop(Lolibook) :-
 	spec(screen),
 	spec(battery_life),
 	spec(webcam),
+	spec(port),
 	write('The laptop i will recommend you: Lolibook').
 
 laptop(msi) :-
